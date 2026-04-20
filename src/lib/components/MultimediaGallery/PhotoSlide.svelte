@@ -14,13 +14,14 @@ USAGE EXAMPLE:
 }} />
 -->
 <script>
+  import { base } from '$app/paths';
   let {
-    photo, // Object with filename, title, caption, and credit
+    photo, // Object with filename, caption, and credit
   } = $props();
 </script>
 
 <div class="slide" data-slide data-photo>
-  <img src="/photos/{photo.filename}" alt={photo.caption} />
+  <img src="{base}/photos/{photo.filename}" alt={photo.caption} />
   <div class="caption">
     <div class="caption-inner">
       <p>{photo.caption}</p>
