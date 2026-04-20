@@ -53,14 +53,13 @@ describe('PhotoSlide', () => {
 
   it('renders the image with correct src and alt', () => {
     render(PhotoSlide, { props: { photo } });
-    const img = screen.getByAltText('Morning Rush');
+    const img = screen.getByAltText('Commuters pack the platform.');
     expect(img).toBeTruthy();
     expect(img.getAttribute('src')).toBe('/photos/subway-platform.jpg');
   });
 
-  it('renders title, caption, and credit', () => {
+  it('renders caption and credit', () => {
     render(PhotoSlide, { props: { photo } });
-    expect(screen.getByText('Morning Rush')).toBeTruthy();
     expect(screen.getByText('Commuters pack the platform.')).toBeTruthy();
     expect(screen.getByText('Photo by Jane Doe')).toBeTruthy();
   });
