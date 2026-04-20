@@ -20,10 +20,9 @@ USAGE EXAMPLE:
 </script>
 
 <div class="slide" data-slide data-photo>
-  <img src="/photos/{photo.filename}" alt={photo.title} />
+  <img src="/photos/{photo.filename}" alt={photo.caption} />
   <div class="caption">
     <div class="caption-inner">
-      <h2>{photo.title}</h2>
       <p>{photo.caption}</p>
       <span class="credit">{photo.credit}</span>
     </div>
@@ -79,18 +78,6 @@ USAGE EXAMPLE:
 
   .caption-inner {
     max-width: 600px;
-  }
-
-  .caption h2 {
-    margin: 0 0 0.5rem;
-    font-size: 1.25rem;
-    line-height: 1.3;
-    color: white;
-
-    @container (min-width: 768px) {
-      font-size: 1.75rem;
-      margin-bottom: 1rem;
-    }
   }
 
   .caption p {
